@@ -1,0 +1,4 @@
+🟡 main.py started
+🔹 Base dir: D:\RAHIL\data_bot_working
+🔹 electron.cmd path: D:\RAHIL\data_bot_working\node_modules\.bin\electron.cmd
+✅ Electron launched
