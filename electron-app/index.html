@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EliteMHE - Data Extraction Bot</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #app {
+      width: 700px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 40px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .header img {
+      height: 60px;
+      margin-right: 20px;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .header-text p {
+      margin: 4px 0 0;
+      color: #6c757d;
+      font-size: 14px;
+    }
+
+    .folder-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .folder-label {
+      font-weight: 500;
+      margin-right: 10px;
+      width: 130px;
+    }
+
+    #folderPath {
+      flex: 1;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-right: 10px;
+      background: #f9f9f9;
+    }
+
+    #browseBtn {
+      padding: 10px 18px;
+      background-color: #ffffff;
+      border: 1px solid #bbb;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    #runBtn {
+      margin-top: 10px;
+      width: 100%;
+      padding: 14px;
+      background-color: #2d89ef;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    #afterExtraction {
+      display: none;
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .action-btn {
+      padding: 10px 24px;
+      margin: 0 10px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #checkResultsBtn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    #exportResultsBtn {
+      background-color: #28a745;
+      color: white;
+    }
+
+    #progressText {
+      display: none;
+      color: orange;
+      font-weight: 500;
+      margin-top: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <div class="header">
+      <img src="./logo.png" alt="App Icon">
+      <div class="header-text">
+        <h1>EliteMHE</h1>
+        <p>Data Extraction Bot</p>
+      </div>
+    </div>
+
+    <!-- Folder Picker -->
+    <div class="folder-row">
+      <div class="folder-label">Folder Selected</div>
+      <input type="text" id="folderPath" readonly placeholder="C:/Documents/Tenders" />
+      <button id="browseBtn">Browse</button>
+    </div>
+
+    <!-- Extraction Button -->
+    <button id="runBtn">Run Extraction</button>
+
+    <!-- Progress Text -->
+    <p id="progressText">Extracting...</p>
+
+    <!-- After Extraction -->
+    <div id="afterExtraction">
+      <button class="action-btn" id="checkResultsBtn">Check Results</button>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
